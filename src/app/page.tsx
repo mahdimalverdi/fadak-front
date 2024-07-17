@@ -1,30 +1,27 @@
 import Container from "@/app/_components/container";
-import { HeroPost } from "@/app/_components/hero-post";
-import { Intro } from "@/app/_components/intro";
-import { MoreStories } from "@/app/_components/more-stories";
-import { getAllPosts } from "@/lib/api";
+import {Intro} from "@/app/_components/intro";
+import {getAllPosts} from "@/lib/api";
+import {NextMeeting} from "@/app/_components/next-meeting";
+import {Meetings} from "@/app/_components/meetings";
+import {Videos} from "@/app/_components/videos";
+import React from "react";
+import {Live} from "@/app/_components/live";
 
 export default function Index() {
-  const allPosts = getAllPosts();
+    const allPosts = getAllPosts();
 
-  const heroPost = allPosts[0];
+    const heroPost = allPosts[0];
 
-  const morePosts = allPosts.slice(1);
+    const morePosts = allPosts.slice(1);
 
-  return (
-    <main>
-      <Container>
-        <Intro />
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
-        />
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
-    </main>
-  );
+    return (<main>
+        <Intro/>
+        <Container>
+            <div className="flex lg:flex-row flex-col justify-between lg:gap-10">
+                <NextMeeting/>
+                <Meetings posts={allPosts}></Meetings>
+            </div>
+        </Container>
+        <Videos></Videos>
+    </main>);
 }

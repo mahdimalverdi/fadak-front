@@ -1,3 +1,27 @@
+@import 'vazirmatn/Vazirmatn-font-face.css';
+@import 'lightgallery/css/lightgallery.css';
+@import 'lightgallery/css/lg-zoom.css';
+@import 'lightgallery/css/lg-thumbnail.css';
+@import 'react-h5-audio-player/lib/styles.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    * {
+        font-family: 'Vazirmatn', sans-serif !important;
+    }
+}
+
+.lg-content {
+    direction: ltr;
+}
+
+.rhap_container{
+    @apply bg-zinc-900;
+}
+
+.rhap_time{
+    @apply text-zinc-400;
+}

@@ -2,7 +2,6 @@ import Avatar from "@/app/_components/avatar";
 import CoverImage from "@/app/_components/cover-image";
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
-import DateFormatter from "./date-formatter";
 
 type Props = {
   title: string;
@@ -34,7 +33,6 @@ export function HeroPost({
             </Link>
           </h3>
           <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
           </div>
         </div>
         <div>

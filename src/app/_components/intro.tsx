@@ -1,21 +1,21 @@
-import { CMS_NAME } from "@/lib/constants";
+import Link from "next/link";
+import styles from "./intro.module.css"
 
 export function Intro() {
-  return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Blog.
-      </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{" "}
-        <a
-          href="https://nextjs.org/"
-          className="underline hover:text-blue-600 duration-200 transition-colors"
-        >
-          Next.js
-        </a>{" "}
-        and {CMS_NAME}.
-      </h4>
-    </section>
-  );
+    return (<section className={styles.intro}>
+            <div className="h-full flex-col flex items-center w-full justify-center select-none content-center">
+                <Link href="/" className="hover:underline">
+                    <img src="/favicon/fadak-logo.png" alt="fadak-logo"
+                         className="tracking-tighter leading-tight md:pr-8"/>
+                </Link>
+                <div>
+                    پایگاه حفظ و نشر آثار کربلایی حسین طاهری
+                </div>
+                <div className="sticky flex flex-rows justify-center divide-x-reverse divide-x text-xl mt-5 content-center items-center">
+                    <a href="#meetings" className="p-2 hover:text-red-900 text-center">مراسم‌ها</a>
+                    <a href="#videos" className="p-2 hover:text-red-900 text-center">نماهنگ‌ها</a>
+                    <a href="/live" className="p-2 hover:text-red-900 text-center">پخش زنده</a>
+                </div>
+            </div>
+        </section>);
 }
