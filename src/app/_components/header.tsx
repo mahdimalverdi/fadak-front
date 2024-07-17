@@ -8,7 +8,6 @@ const Header = () => {
                      className="h-12 tracking-tighter leading-tight md:pr-8"/>
             </Link></div>
             <nav>
-                <a href="/" className="hover:text-red-500 btn px-5 inline-block">خانه</a>
                 <a href="/#meetings" className="hover:text-red-500 btn px-5 inline-block">مراسم‌ها</a>
                 <a href="/#videos" className="hover:text-red-500 btn px-5 inline-block">‌نماهنگ‌ها</a>
                 <a href="/live" className="hover:text-red-500 btn px-5 inline-block">پخش زنده</a>

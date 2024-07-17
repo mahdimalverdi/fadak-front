@@ -21,7 +21,7 @@ export function PostImages({images}:Props) {
                 >
                     {images.map((image, index) => (
                         <a key={index} href={image.source}>
-                            <img src={image.source} className="transition-all opacity-75 hover:opacity-100 hover:scale-105"/>
+                            <img src={image.source} className="transition-all opacity-90 hover:opacity-100 hover:scale-105"/>
                         </a>
                     ))}
                 </LightGallery>
